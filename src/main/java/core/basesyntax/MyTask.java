@@ -28,14 +28,14 @@ public class MyTask extends RecursiveTask<Long> {
                 result += subTask.join();
             }
             return result;
-        }  else {
+        } else {
             System.out.println("Doing task myself, workLoad: " + difference);
             long sum = 0L;
             for (long i = startPoint; i < finishPoint; i++) {
                 sum += i;
             }
             return sum;
-       }
+        }
     }
 
     private List<RecursiveTask<Long>> createSubTasks() {
